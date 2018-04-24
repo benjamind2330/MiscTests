@@ -9,15 +9,15 @@ public:
 
     SimpleBuffer(size_t size) :
         _buffer(size),
-        _readPosition(0),
-        _writePosition(0)
+        _readPosition(size),
+        _writePosition(size)
     {
 
     }
 
     size_t getAvailableSize()
     {
-        return _buffer.size() - _writePosition;
+        return _writePosition;
     }
 
     size_t getMaxSize()
