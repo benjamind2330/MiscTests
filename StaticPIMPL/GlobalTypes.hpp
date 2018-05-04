@@ -1,9 +1,5 @@
 #pragma once
 
-namespace constants {
-    extern const size_t RSBuilderSize;
-}
-
 namespace types {
 
 

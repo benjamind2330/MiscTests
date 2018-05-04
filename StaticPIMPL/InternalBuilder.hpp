@@ -4,8 +4,6 @@
 
 
 
-
-
 class InternalBuilder
 {
 public:
@@ -13,13 +11,10 @@ public:
     InternalBuilder() { }
     types::Motion::Type motionType;
     int robotId;
-
 };
 
-namespace constants {
-const size_t RSBuilderSize = sizeof(InternalBuilder);
-}
 
+typedef InternalBuilder InternalImplementation;
 
 
 

@@ -149,10 +149,14 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GlobalTypes.hpp" />
+    <ClInclude Include="InternalBuilder.hpp" />
+    <ClInclude Include="RSBuilder.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="RSBuilder.cpp" />
     <ClCompile Include="StaticPIMPL.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
