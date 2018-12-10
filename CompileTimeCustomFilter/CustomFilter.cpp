@@ -52,6 +52,7 @@ template <size_t I = 0, typename... Tf>
 template <typename... TFunctors>
 size_t filter(std::string in, std::string &out) {
   std::tuple<TFunctors...> functors;
+  out.clear();
   for (auto c : in) {
     if (filter_char_check(c, functors)) {
       out += c;
@@ -67,6 +68,16 @@ int main() {
     filters::AlphNum,
     filters::NoA>(in, out);
 
-  std::cout << "Filt: " << out << "\n";
+  std::cout << "Filt1: " << s << " | "<< out << "\n";
+
+  s = filter<filters::NoRepeatedNumbers,
+    filters::AlphNum>(in, out);
+
+  std::cout << "Filt2: " << s << " | "<< out << "\n";
+
+
+
+
+
   return 0;
 }
